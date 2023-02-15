@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 65.2%;
+}
+
+.hide {
+  display: none;
+}
+body {
+  display: grid;
+  font-size: 1.6rem;
+  place-items: center;
+  height: 100vh;
+  background: linear-gradient(45deg, #190361 10%, #bb00ff 100%);
+  color: #34355b;
+
+  animation: gradient 10s ease infinite;
+  background-size: 200% 200%;
+}
+main {
+  background: #fff;
+  box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.8);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+/*Screen 1*/
+
+main .screen1 {
+  width: 42.8rem;
+  padding: 4.8rem 6.4rem 6.4rem;
+}
+
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+}
+
+p {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 1.4rem;
+  margin-bottom: 2rem;
+}
+#fortuneCookie {
+  cursor: pointer;
+}
+#fortuneCookie:hover {
+  animation: shake 0.2s infinite;
+}
+
+/*Screen */
+
+main .screen2 {
+  width: 42.8rem;
+  padding: 48px 64px;
+}
+
+.screen2 p {
+  position: relative;
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  padding: 1rem;
+  color: #000;
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px rgba(85, 85, 85, 0.5);
+}
+
+.screen2 button {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1.6rem;
+  margin: 0 6.3rem;
+  background: #ff9500;
+  color: #fff;
+
+  border-radius: 0.4rem;
+  border: none;
+
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.screen2 button:hover {
+  background: #c07000;
+}
+
+#fortunePreview {
+  animation: zoom-up 2s ease-in-out;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0%);
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: translateY(3%);
+  }
+  75% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateX(-3%);
+  }
+}
+
+@keyframes zoom-up {
+  0% {
+    scale: 0%;
+    left: -15px;
+    bottom: -160px;
+  }
+
+  100% {
+    left: 0;
+    scale: 100%;
+    bottom: 0;
+  }
+}
+
+@media (max-width: 360px) {
+  body {
+    display: flex;
+    font-size: 1.6rem;
+    place-items: center;
+    background: linear-gradient(360deg, #190361 10%, #bb00ff 100%) no-repeat;
+    color: #34355b;
+    animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  main {
+    width: 90%;
+  }
+  main .screen1 {
+    width: auto;
+    padding: 4.8rem 6.4rem;
+  }
+  #fortuneCookie {
+    width: 100%;
+    animation: shake 0.2s infinite;
+  }
+
+  main .screen2 {
+    width: auto;
+  }
+  #openedCookie {
+    width: 100%;
+  }
+  .screen2 button {
+    margin: 0;
+  }
+}
