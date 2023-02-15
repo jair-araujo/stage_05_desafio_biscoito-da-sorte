@@ -17,6 +17,7 @@ const fortunes = [
   'Não deixe que as pessoas te façam desistir daquilo que você mais quer na vida. Acredite. Lute. Conquiste. E acima de tudo, seja feliz!',
   'Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.'
 ];
+
 let index = fortunes.length;
 let randomFortune;
 
@@ -35,7 +36,6 @@ function toggleScreen() {
 
 function randomLuck() {
   for (let fortune = 0; fortune < index; fortune++) {
-    console.log(index);
     if (fortune == randomFortune) {
       fortunePreview.innerHTML = fortunes[randomFortune];
     }
