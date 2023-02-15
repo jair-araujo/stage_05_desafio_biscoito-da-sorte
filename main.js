@@ -15,20 +15,17 @@ const fortunes = [
   'Tudo o que um sonho precisa para ser realizado é alguém que acredite que ele possa ser realizado.',
   'Pessimismo leva à fraqueza, otimismo ao poder.',
   'Não deixe que as pessoas te façam desistir daquilo que você mais quer na vida. Acredite. Lute. Conquiste. E acima de tudo, seja feliz!',
-  'Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.',
-  'teste'
+  'Se alguém está tão cansado que não possa te dar um sorriso, deixa-lhe o teu.'
 ];
 let index = fortunes.length;
 let randomFortune;
 
-console.log(fortunes.length);
-
 fortuneCookie.addEventListener('click', () => {
   toggleScreen();
   randomFortune = Math.round(Math.random() * index);
-  console.log('Dentro do evento ' + randomFortune);
   randomLuck();
 });
+
 button.addEventListener('click', toggleScreen);
 
 function toggleScreen() {
